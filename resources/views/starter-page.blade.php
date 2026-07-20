@@ -42,8 +42,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
-        <img src="{{ asset('assets/img/logo.png') }}" alt="">
-        <h1 class="sitename">QuickStart</h1>
+        <img src="{{ asset('assets/img/logo-pem.png') }}" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
