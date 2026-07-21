@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - QuickStart Bootstrap Template</title>
+  <title>{{config('app.name')}} - Bootstrap Template</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -42,40 +42,22 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="{{ url('/') }}" class="logo d-flex align-items-center me-auto">
-        <img src="{{ asset('assets/img/logo.png') }}" alt="">
-        <h1 class="sitename">QuickStart</h1>
+        <img src="{{ asset('assets/img/logo-pem.png') }}" alt="">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="{{ url('/') }}#hero" class="active">Home</a></li>
-          <li><a href="{{ url('/') }}#about">About</a></li>
-          <li><a href="{{ url('/') }}#features">Features</a></li>
-          <li><a href="{{ url('/') }}#services">Services</a></li>
-          <li><a href="{{ url('/') }}#pricing">Pricing</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
+          <li><a href="{{ url('/') }}#hero" class="active">Beranda</a></li>
+          <li><a href="{{ url('/') }}#about">Keunggulan</a></li>
+          <li><a href="{{ url('/') }}#features">Tentang Kami</a></li>
+          <li><a href="{{ url('/') }}#clients">Client</a></li>
+          <li><a href="{{ url('/') }}#services">Layanan</a></li>
           <li><a href="{{ url('/') }}#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="{{ url('/') }}#about">Get Started</a>
+      <a class="btn-getstarted" href="{{ url('/') }}#about">Get Buy Produk</a>
 
     </div>
   </header>
@@ -89,10 +71,13 @@
       </div>
       <div class="container text-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
-          <h1 data-aos="fade-up">Welcome to <span>QuickStart</span></h1>
-          <p data-aos="fade-up" data-aos-delay="100">Quickly start your project now and set the stage for success<br></p>
+          <h1 data-aos="fade-up">Welcome to <span>{{config('app.name')}}</span></h1>
+          <p data-aos="fade-up" data-aos-delay="100" style="max-width: 800px; margin: 5px auto 30px auto;">
+            membantu perusahaan manufaktur dan pabrik beralih dari bahan bakar minyak atau batu bara ke gas
+            alam yang lebih ramah lingkungan dan efisien</p>
+
           <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
-            <a href="#about" class="btn-get-started">Get Started</a>
+            <a href="#about" class="btn-get-started">Buy Produk</a>
             <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Watch Video</span></a>
           </div>
           <img src="{{ asset('assets/img/hero-services-img.webp') }}" class="img-fluid hero-img" alt="" data-aos="zoom-out" data-aos-delay="300">
@@ -152,7 +137,7 @@
 
         <div class="row gy-4">
 
-          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-8 mx-auto content text-center" data-aos="fade-up" data-aos-delay="100">
             <p class="who-we-are">Who We Are</p>
             <h3>Unleashing Potential with Creative Strategy</h3>
             <p class="fst-italic">
@@ -167,66 +152,12 @@
             <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
 
-          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
-            <div class="row gy-4">
-              <div class="col-lg-6">
-                <img src="{{ asset('assets/img/about-company-1.jpg') }}" class="img-fluid" alt="">
-              </div>
-              <div class="col-lg-6">
-                <div class="row gy-4">
-                  <div class="col-lg-12">
-                    <img src="{{ asset('assets/img/about-company-2.jpg') }}" class="img-fluid" alt="">
-                  </div>
-                  <div class="col-lg-12">
-                    <img src="{{ asset('assets/img/about-company-3.jpg') }}" class="img-fluid" alt="">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
         </div>
 
       </div>
     </section><!-- /About Section -->
 
-    <!-- Clients Section -->
-    <section id="clients" class="clients section">
-
-      <div class="container" data-aos="fade-up">
-
-        <div class="row gy-4">
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets/img/clients/client-1.png') }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets/img/clients/client-2.png') }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets/img/clients/client-3.png') }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets/img/clients/client-4.png') }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets/img/clients/client-5.png') }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-          <div class="col-xl-2 col-md-3 col-6 client-logo">
-            <img src="{{ asset('assets/img/clients/client-6.png') }}" class="img-fluid" alt="">
-          </div><!-- End Client Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Clients Section -->
+    
 
     <!-- Features Section -->
     <section id="features" class="features section">
@@ -447,6 +378,43 @@
 
     </section><!-- /Services Section -->
 
+    <!-- Clients Section -->
+    <section id="clients" class="clients section">
+
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets/img/clients/client-1.png') }}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets/img/clients/client-2.png') }}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets/img/clients/client-3.png') }}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets/img/clients/client-4.png') }}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets/img/clients/client-5.png') }}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{{ asset('assets/img/clients/client-6.png') }}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Clients Section -->
+
     <!-- More Features Section -->
     <section id="more-features" class="more-features section">
 
@@ -481,6 +449,7 @@
                 <div>
                   <h4>Dine Pad</h4>
                   <p>Explicabo est voluptatum asperiores consequatur magnam. Et veritatis odit</p>
+
                 </div>
               </div><!-- End Icon Box -->
 
@@ -506,82 +475,7 @@
 
     </section><!-- /More Features Section -->
 
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Pricing</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="pricing-item">
-              <h3>Free Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
-              </ul>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="pricing-item featured">
-              <p class="popular">Popular</p>
-              <h3>Business Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li class="na"><i class="bi bi-x"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
-              </ul>
-            </div>
-          </div><!-- End Pricing Item -->
-
-          <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="pricing-item">
-              <h3>Developer Plan</h3>
-              <p class="description">Ullam mollitia quasi nobis soluta in voluptatum et sint palora dex strater</p>
-              <h4><sup>$</sup>49<span> / month</span></h4>
-              <a href="#" class="cta-btn">Start a free trial</a>
-              <p class="text-center small">No credit card required</p>
-              <ul>
-                <li><i class="bi bi-check"></i> <span>Quam adipiscing vitae proin</span></li>
-                <li><i class="bi bi-check"></i> <span>Nec feugiat nisl pretium</span></li>
-                <li><i class="bi bi-check"></i> <span>Nulla at volutpat diam uteera</span></li>
-                <li><i class="bi bi-check"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li><i class="bi bi-check"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-                <li><i class="bi bi-check"></i> <span>Voluptate id voluptas qui sed aperiam rerum</span></li>
-                <li><i class="bi bi-check"></i> <span>Iure nihil dolores recusandae odit voluptatibus</span></li>
-              </ul>
-            </div>
-          </div><!-- End Pricing Item -->
-
-        </div>
-
-      </div>
-
-    </section><!-- /Pricing Section -->
 
     <!-- Faq Section -->
     <section id="faq" class="faq section">
@@ -874,7 +768,7 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="{{ url('/') }}" class="logo d-flex align-items-center">
-            <span class="sitename">QuickStart</span>
+            <span class="sitename">{{config('app.name')}}</span>
           </a>
           <div class="footer-contact pt-3">
             <p>A108 Adam Street</p>
@@ -927,7 +821,7 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">QuickStart</strong><span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">{{config('app.name')}}</strong><span>All Rights Reserved</span></p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
