@@ -15,7 +15,7 @@
             <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
               <i class="bi bi-geo-alt"></i>
               <h3>Alamat Kantor</h3>
-              <p>Kantor PT Pratama Energy Mandiri, Indonesia</p>
+              <p>Pergudangan Suncity Biz Blok A no. 46, Sawah, Wunut, Porong, Sidoarjo Regency, East Java 61274, Indonesia</p>
             </div>
           </div><!-- End Info Item -->
 
@@ -39,7 +39,7 @@
 
         <div class="row gy-4 mt-1">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126748.56347862248!2d107.5731168725838!3d-6.903444341680122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e6398252477f%3A0x146aed17f20d3e63!2sBandung%2C%20Bandung%20City%2C%20West%20Java!5e0!3m2!1sen!2sid!4v1676961268712!5m2!1sen!2sid" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.494333088348!2d112.69802059999999!3d-7.5209340000000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7df001a74bc23%3A0xe0d7c63c28a93e3e!2sPT%20Pratama%20Energy%20Mandiri!5e0!3m2!1sid!2sid!4v1784786768725!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">

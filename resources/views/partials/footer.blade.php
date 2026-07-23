@@ -7,8 +7,8 @@
             <span class="sitename">Pratama Energy Mandiri</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
+            <p>Pergudangan Suncity Biz Blok A no. 46, Sawah, Wunut, Porong, Sidoarjo Regency.</p>
+            <p>East Java 61274, Indonesia</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
