@@ -10,8 +10,8 @@
           <li><a href="{{ url('/') }}#hero" class="active">Beranda</a></li>
           <li><a href="{{ url('/') }}#about">Keunggulan</a></li>
           <li><a href="{{ url('/') }}#features">Tentang Kami</a></li>
-          <li><a href="{{ url('/') }}#clients">Client</a></li>
           <li><a href="{{ url('/') }}#services">Layanan</a></li>
+          <li><a href="{{ url('/') }}#clients">Client</a></li>
           <li><a href="{{ url('/') }}#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>

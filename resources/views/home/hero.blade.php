@@ -5,7 +5,7 @@
       </div>
       <div class="container text-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
-          <h1 data-aos="fade-up">Welcome to <span>{{config('app.name')}}</span></h1>
+          <h1 data-aos="fade-up">Welcome to <span>Pratama Energy Mandiri</span></h1>
           <p data-aos="fade-up" data-aos-delay="100" style="max-width: 800px; margin: 5px auto 30px auto;">
             membantu perusahaan manufaktur dan pabrik beralih dari bahan bakar minyak atau batu bara ke gas
             alam yang lebih ramah lingkungan dan efisien</p>
