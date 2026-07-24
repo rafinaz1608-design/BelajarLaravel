@@ -4,11 +4,11 @@
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="{{ url('/') }}" class="logo d-flex align-items-center">
-            <span class="sitename">{{config('app.name')}}</span>
+            <span class="sitename">Pratama Energy Mandiri</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
+            <p>Pergudangan Suncity Biz Blok A no. 46, Sawah, Wunut, Porong, Sidoarjo Regency.</p>
+            <p>East Java 61274, Indonesia</p>
             <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
@@ -31,7 +31,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-2 col-md-3 footer-links">
+        <!--<div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
             <li><a href="#">Web Design</a></li>
@@ -40,7 +40,7 @@
             <li><a href="#">Marketing</a></li>
             <li><a href="#">Graphic Design</a></li>
           </ul>
-        </div>
+        </div>-->
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4>Our Newsletter</h4>
