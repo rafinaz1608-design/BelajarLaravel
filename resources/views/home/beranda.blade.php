@@ -7,10 +7,10 @@
 
           <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi-building"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Kantoran</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                <h4 class="title"><a href="#" class="stretched-link">Transportasi CNG</a></h4>
+                <p class="description">Melayani perdagangan dan distribusi Gas Alam Terkompresi (CNG) untuk kebutuhan industri di berbagai wilayah Indonesia.</p>
               </div>
             </div>
           </div>
@@ -18,20 +18,20 @@
 
           <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi-gear"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Dolar</a></h4>
-                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip exa</p>
+                <h4 class="title"><a href="#" class="stretched-link">Konstruksi</a></h4>
+                <p class="description">Menyediakan jasa konstruksi meliputi pembangunan pabrik, maintenance, New Building, serta pekerjaan Civil, Mechanical, dan Electrical.</p>
               </div>
             </div>
           </div><!-- End Service Item -->
 
           <div class="col-xl-4 col-lg-6" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item d-flex">
-              <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+              <div class="icon flex-shrink-0"><i class="bi bi-graph-up-arrow"></i></div>
               <div>
-                <h4 class="title"><a href="#" class="stretched-link">Statistic</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum</p>
+                <h4 class="title"><a href="#" class="stretched-link">Komitmen</a></h4>
+                <p class="description">Berkomitmen memberikan solusi yang terintegrasi, berkualitas, dan berkelanjutan dengan mengutamakan kepuasan pelanggan.</p>
               </div>
             </div>
           </div><!-- End Service Item -->
