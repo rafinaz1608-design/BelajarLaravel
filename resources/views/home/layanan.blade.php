@@ -5,6 +5,7 @@
       <div class="container section-title" data-aos="fade-up">
         <h2>Layanan Kami</h2>
         <p>Kami menyediakan berbagai solusi di bidang energi dan konstruksi untuk memenuhi kebutuhan industri dengan mengutamakan kualitas, keselamatan, dan profesionalisme.</p>
+        <p>Solusi Terintegrasi Distribusi Gas Alam (CNG) dan Layanan Konstruksi Industri PT Pratama Energy Mandiri</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -17,6 +18,11 @@
               <div>
                 <h3>Transportasi & Distribusi CNG</h3>
                 <p>Melayani perdagangan dan pendistribusian Gas Alam Terkompresi (CNG) menggunakan Gas Transport Module (GTM) untuk memenuhi kebutuhan energi berbagai sektor industri.</p>
+              <i class="bi bi-fuel-pump icon"></i>
+              <div>
+                <h3>CNG Solution</h3>
+                <p>Solusi penyediaan Compressed Natural Gas (CNG) untuk kebutuhan energi industri yang lebih efisien, ekonomis, dan ramah lingkungan.</p>
+                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -27,6 +33,11 @@
               <div>
                 <h3>Pengembangan Infrastruktur Gas</h3>
                 <p>Menyediakan pembangunan jaringan pipa gas alam dan fasilitas pendukung untuk mendukung distribusi energi yang efisien, aman, dan berkelanjutan.</p>
+              <i class="bi bi-truck icon"></i>
+              <div>
+                <h3>Gas Transportation</h3>
+                <p>Layanan transportasi dan pendistribusian gas alam menggunakan Gas Transport Module (GTM) secara aman, efisien, dan terjamin.</p>
+                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -37,6 +48,11 @@
               <div>
                 <h3>Konstruksi Sipil (Civil Construction)</h3>
                 <p>Melayani pembangunan gedung, pabrik, infrastruktur, dan berbagai pekerjaan konstruksi sipil sesuai standar mutu dan keselamatan kerja.</p>
+              <i class="bi bi-building-gear icon"></i>
+              <div>
+                <h3>Construction</h3>
+                <p>Jasa konstruksi profesional mencakup pembangunan pabrik, gedung industri, infrastruktur penunjang, serta pekerjaan Civil.</p>
+                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -47,6 +63,11 @@
               <div>
                 <h3>Mechanical & Electrical</h3>
                 <p>Menyediakan pekerjaan instalasi mekanikal dan elektrikal untuk kebutuhan industri, pabrik, maupun fasilitas komersial dengan tenaga kerja profesional.</p>
+              <i class="bi bi-lightning-charge icon"></i>
+              <div>
+                <h3>Mechanical & Electrical</h3>
+                <p>Pekerjaan instalasi, pengujian, dan perawatan sistem mekanikal serta elektrikal industri dengan standar teknis dan keselamatan tinggi.</p>
+                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -57,6 +78,11 @@
               <div>
                 <h3>Maintenance & New Building</h3>
                 <p>Memberikan layanan pemeliharaan fasilitas industri, renovasi, serta pembangunan gedung baru untuk menjaga produktivitas dan kualitas operasional pelanggan.</p>
+              <i class="bi bi-diagram-3 icon"></i>
+              <div>
+                <h3>Energy Infrastructure</h3>
+                <p>Pembangunan dan pengembangan jaringan pipa gas alam serta fasilitas infrastruktur energi nasional untuk mendukung pertumbuhan industri.</p>
+                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Item -->
@@ -67,6 +93,11 @@
               <div>
                 <h3>Solusi Terintegrasi</h3>
                 <p>Menghadirkan layanan terpadu mulai dari distribusi CNG, pembangunan infrastruktur energi, hingga jasa konstruksi untuk memberikan solusi terbaik bagi setiap klien.</p>
+              <i class="bi bi-tools icon"></i>
+              <div>
+                <h3>Industrial Maintenance</h3>
+                <p>Layanan pemeliharaan dan perawatan fasilitas industri secara berkala guna mengoptimalkan kinerja operasional sarana pabrik.</p>
+                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
           </div><!-- End Service Item -->

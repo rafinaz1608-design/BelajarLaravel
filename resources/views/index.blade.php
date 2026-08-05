@@ -14,9 +14,15 @@
 
     @include('home.tentang')
 
+    @include('home.layanan')
+
+    @include('home.proyek')
+
+    @include('home.legalitas') 
+
     @include('home.client')
 
-    @include('home.layanan')
+    @include('home.faq')
 
     @include('home.contact')
 
