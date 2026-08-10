@@ -9,12 +9,12 @@
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="container d-lg-flex justify-content-between align-items-center">
-        <h1 class="mb-2 mb-lg-0">{{ $service->title }}</h1>
+        <h1 class="mb-2 mb-lg-0"></h1>
         <nav class="breadcrumbs">
           <ol>
-            <li><a href="{{ url('/') }}">Beranda</a></li>
-            <li><a href="{{ url('/') }}#services">Layanan</a></li>
-            <li class="current">{{ $service->title }}</li>
+            <li><a href="{{ url('/') }}"></a></li>
+            <li><a href="{{ url('/') }}#services"></a></li>
+            <li class="current"></li>
           </ol>
         </nav>
       </div>
