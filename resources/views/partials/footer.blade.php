@@ -13,13 +13,6 @@
             <p>Jawa Timur 61274</p>
             <p class="mt-3"><strong>Phone:</strong> <span>0813-5703-5381</span></p>
             <p><strong>Email:</strong> <span>pem@pratamaenergymandiri.co.id</span></p>
-            <span class="sitename">Pratama Energy Mandiri</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Pergudangan Suncity Biz Blok A no. 46, Sawah, Wunut, Porong, Sidoarjo Regency.</p>
-            <p>East Java 61274, Indonesia</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href=""><i class="bi bi-twitter-x"></i></a>
