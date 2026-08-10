@@ -11,71 +11,18 @@
 
         <div class="row g-5">
 
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item item-cyan position-relative">
-              <i class="bi bi-truck icon"></i>
-              <div>
-                <h3>Transportasi & Distribusi CNG</h3>
-                <p>Melayani perdagangan dan pendistribusian Gas Alam Terkompresi (CNG) menggunakan Gas Transport Module (GTM) untuk memenuhi kebutuhan energi berbagai sektor industri.</p>
-                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
+          @foreach($services as $service)
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="{{ ($loop->index + 1) * 100 }}">
+              <div class="service-item {{ $service->color_class ?? 'item-cyan' }} position-relative">
+                <i class="{{ $service->icon ?? 'bi bi-activity' }} icon"></i>
+                <div>
+                  <h3>{{ $service->title }}</h3>
+                  <p>{{ $service->short_description }}</p>
+                  <a href="{{ route('services.show', $service->slug) }}" class="read-more stretched-link">Detail Layanan <i class="bi bi-arrow-right"></i></a>
+                </div>
               </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="service-item item-orange position-relative">
-              <i class="bi bi-fuel-pump icon"></i>
-              <div>
-                <h3>Pengembangan Infrastruktur Gas</h3>
-                <p>Menyediakan pembangunan jaringan pipa gas alam dan fasilitas pendukung untuk mendukung distribusi energi yang efisien, aman, dan berkelanjutan.</p>
-                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="service-item item-teal position-relative">
-              <i class="bi bi-building icon"></i>
-              <div>
-                <h3>Konstruksi Sipil (Civil Construction)</h3>
-                <p>Melayani pembangunan gedung, pabrik, infrastruktur, dan berbagai pekerjaan konstruksi sipil sesuai standar mutu dan keselamatan kerja.</p>
-                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item item-red position-relative">
-              <i class="bi bi-gear-wide-connected icon"></i>
-              <div>
-                <h3>Mechanical & Electrical</h3>
-                <p>Menyediakan pekerjaan instalasi mekanikal dan elektrikal untuk kebutuhan industri, pabrik, maupun fasilitas komersial dengan tenaga kerja profesional.</p>
-                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item item-indigo position-relative">
-              <i class="bi bi-tools icon"></i>
-              <div>
-                <h3>Maintenance & New Building</h3>
-                <p>Memberikan layanan pemeliharaan fasilitas industri, renovasi, serta pembangunan gedung baru untuk menjaga produktivitas dan kualitas operasional pelanggan.</p>
-                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item item-pink position-relative">
-              <i class="bi bi-diagram-3 icon"></i>
-              <div>
-                <h3>Solusi Terintegrasi</h3>
-                <p>Menghadirkan layanan terpadu mulai dari distribusi CNG, pembangunan infrastruktur energi, hingga jasa konstruksi untuk memberikan solusi terbaik bagi setiap klien.</p>
-                <a href="#contact" class="read-more stretched-link">Konsultasi Layanan <i class="bi bi-arrow-right"></i></a>
-              </div>
-            </div>
-          </div><!-- End Service Item -->
+            </div><!-- End Service Item -->
+          @endforeach
 
         </div>
 

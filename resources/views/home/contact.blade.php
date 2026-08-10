@@ -51,7 +51,8 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-            <form action="#" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+            <form action="{{ route('contact.store') }}" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+              @csrf
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -80,6 +81,12 @@
 
               </div>
             </form>
+
+            @if(session('success'))
+              <div class="alert alert-success mt-3" role="alert">
+                {{ session('success') }}
+              </div>
+            @endif
           </div><!-- End Contact Form -->
 
         </div>
