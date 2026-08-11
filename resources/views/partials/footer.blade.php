@@ -28,8 +28,8 @@
             <li><a href="#hero">Beranda</a></li>
             <li><a href="#about">Keunggulan</a></li>
             <li><a href="#about-2">Tentang Kami</a></li>
-            <li><a href="#clients">Client</a></li>
-            <li><a href="#services">Layanan</a></li>
+            <li><a href="#services">Layanan</a></li><li>
+            <a href="#clients">Client</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
