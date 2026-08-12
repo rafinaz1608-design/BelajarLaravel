@@ -34,29 +34,35 @@
           <div class="form-grid">
             <div class="form-group">
               <label class="form-label" for="title">Judul Layanan <span class="req">*</span></label>
-              <input type="text" id="title" name="title" class="form-control" placeholder="cth: Desain Grafis" value="{{ old('title') }}" required>
+              <input type="text" id="title" name="title" class="form-control @error('title') is-invalid @enderror" placeholder="cth: Desain Grafis" value="{{ old('title') }}" required>
+              @error('title') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="slug">Slug URL</label>
-              <input type="text" id="slug" name="slug" class="form-control" placeholder="auto-generate dari judul" value="{{ old('slug') }}">
+              <input type="text" id="slug" name="slug" class="form-control @error('slug') is-invalid @enderror" placeholder="auto-generate dari judul" value="{{ old('slug') }}">
               <div class="form-hint">Kosongkan untuk generate otomatis dari judul.</div>
+              @error('slug') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="icon">Bootstrap Icon Class</label>
-              <input type="text" id="icon" name="icon" class="form-control" placeholder="cth: bi bi-palette-fill" value="{{ old('icon') }}">
+              <input type="text" id="icon" name="icon" class="form-control @error('icon') is-invalid @enderror" placeholder="cth: bi bi-palette-fill" value="{{ old('icon') }}">
               <div class="form-hint">Lihat icon di <a href="https://icons.getbootstrap.com" target="_blank" style="color:var(--accent-cyan)">icons.getbootstrap.com</a></div>
+              @error('icon') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="color_class">Warna / Color Class</label>
-              <input type="text" id="color_class" name="color_class" class="form-control" placeholder="cth: text-purple" value="{{ old('color_class') }}">
+              <input type="text" id="color_class" name="color_class" class="form-control @error('color_class') is-invalid @enderror" placeholder="cth: text-purple" value="{{ old('color_class') }}">
+              @error('color_class') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group full">
               <label class="form-label" for="short_description">Deskripsi Singkat <span class="req">*</span></label>
-              <textarea id="short_description" name="short_description" class="form-control" rows="3" placeholder="Deskripsi singkat layanan (tampil di halaman utama)" required>{{ old('short_description') }}</textarea>
+              <textarea id="short_description" name="short_description" class="form-control @error('short_description') is-invalid @enderror" rows="3" placeholder="Deskripsi singkat layanan (tampil di halaman utama)" required>{{ old('short_description') }}</textarea>
+              @error('short_description') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group full">
               <label class="form-label" for="full_description">Deskripsi Lengkap <span class="req">*</span></label>
-              <textarea id="full_description" name="full_description" class="form-control" rows="6" placeholder="Penjelasan detail layanan ini..." required>{{ old('full_description') }}</textarea>
+              <textarea id="full_description" name="full_description" class="form-control @error('full_description') is-invalid @enderror" rows="6" placeholder="Penjelasan detail layanan ini..." required>{{ old('full_description') }}</textarea>
+              @error('full_description') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
           </div>
         </div>

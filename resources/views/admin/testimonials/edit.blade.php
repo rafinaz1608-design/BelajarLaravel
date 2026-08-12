@@ -37,15 +37,18 @@
           <div class="form-grid">
             <div class="form-group">
               <label class="form-label" for="client_name">Nama Klien <span class="req">*</span></label>
-              <input type="text" id="client_name" name="client_name" class="form-control" value="{{ old('client_name', $testimonial->client_name) }}" required>
+              <input type="text" id="client_name" name="client_name" class="form-control @error('client_name') is-invalid @enderror" value="{{ old('client_name', $testimonial->client_name) }}" required>
+              @error('client_name') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="company">Perusahaan <span class="req">*</span></label>
-              <input type="text" id="company" name="company" class="form-control" value="{{ old('company', $testimonial->company) }}" required>
+              <input type="text" id="company" name="company" class="form-control @error('company') is-invalid @enderror" value="{{ old('company', $testimonial->company) }}" required>
+              @error('company') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group full">
               <label class="form-label" for="role">Jabatan</label>
-              <input type="text" id="role" name="role" class="form-control" value="{{ old('role', $testimonial->role) }}">
+              <input type="text" id="role" name="role" class="form-control @error('role') is-invalid @enderror" value="{{ old('role', $testimonial->role) }}">
+              @error('role') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
           </div>
 
@@ -57,11 +60,13 @@
                 <label for="star{{ $i }}" title="{{ $i }} bintang">★</label>
               @endfor
             </div>
+            @error('rating') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
           </div>
 
           <div class="form-group">
             <label class="form-label" for="content">Isi Ulasan <span class="req">*</span></label>
-            <textarea id="content" name="content" class="form-control" rows="5" required>{{ old('content', $testimonial->content) }}</textarea>
+            <textarea id="content" name="content" class="form-control @error('content') is-invalid @enderror" rows="5" required>{{ old('content', $testimonial->content) }}</textarea>
+            @error('content') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
           </div>
 
           <div class="form-check" style="margin-bottom:20px">
@@ -100,8 +105,9 @@
         </div>
         <div class="form-group mb-0">
           <label class="form-label" for="avatar">Ganti Foto</label>
-          <input type="file" id="avatar" name="avatar" class="form-control" accept="image/*">
+          <input type="file" id="avatar" name="avatar" class="form-control @error('avatar') is-invalid @enderror" accept="image/*">
           <div class="form-hint">Kosongkan jika tidak ingin mengganti.</div>
+          @error('avatar') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
       </div>
     </div>

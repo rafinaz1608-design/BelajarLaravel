@@ -35,12 +35,14 @@
 
         <div class="form-group">
           <label class="form-label" for="name">Nama Klien / Perusahaan <span class="req">*</span></label>
-          <input type="text" id="name" name="name" class="form-control" value="{{ old('name', $client->name) }}" required>
+          <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name', $client->name) }}" required>
+          @error('name') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
           <label class="form-label" for="website">Website</label>
-          <input type="url" id="website" name="website" class="form-control" value="{{ old('website', $client->website) }}">
+          <input type="url" id="website" name="website" class="form-control @error('website') is-invalid @enderror" value="{{ old('website', $client->website) }}">
+          @error('website') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
@@ -51,9 +53,10 @@
               <span style="font-size:12px;color:var(--text-muted)">Logo saat ini</span>
             </div>
           @endif
-          <input type="file" id="logo" name="logo" class="form-control" accept="image/*" data-preview="#logo-preview">
+          <input type="file" id="logo" name="logo" class="form-control @error('logo') is-invalid @enderror" accept="image/*" data-preview="#logo-preview">
           <div class="form-hint">Upload baru untuk mengganti logo.</div>
           <div class="img-preview-wrap" id="logo-preview"><img src="" alt="Preview Logo"></div>
+          @error('logo') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-check" style="margin-bottom:24px">

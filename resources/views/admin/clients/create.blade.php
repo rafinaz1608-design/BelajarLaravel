@@ -30,19 +30,22 @@
 
         <div class="form-group">
           <label class="form-label" for="name">Nama Klien / Perusahaan <span class="req">*</span></label>
-          <input type="text" id="name" name="name" class="form-control" placeholder="cth: PT. Teknologi Maju" value="{{ old('name') }}" required>
+          <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="cth: PT. Teknologi Maju" value="{{ old('name') }}" required>
+          @error('name') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
           <label class="form-label" for="website">Website (opsional)</label>
-          <input type="url" id="website" name="website" class="form-control" placeholder="https://example.com" value="{{ old('website') }}">
+          <input type="url" id="website" name="website" class="form-control @error('website') is-invalid @enderror" placeholder="https://example.com" value="{{ old('website') }}">
+          @error('website') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
           <label class="form-label" for="logo">Logo Perusahaan</label>
-          <input type="file" id="logo" name="logo" class="form-control" accept="image/*" data-preview="#logo-preview">
+          <input type="file" id="logo" name="logo" class="form-control @error('logo') is-invalid @enderror" accept="image/*" data-preview="#logo-preview">
           <div class="form-hint">PNG transparan lebih baik. JPG, WebP diterima. Maks 1MB.</div>
           <div class="img-preview-wrap" id="logo-preview"><img src="" alt="Preview Logo"></div>
+          @error('logo') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-check" style="margin-bottom:24px">
