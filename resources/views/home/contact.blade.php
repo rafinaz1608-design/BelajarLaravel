@@ -56,19 +56,31 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Nama Anda" required="">
+                  <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" placeholder="Nama Anda" value="{{ old('name') }}" required="">
+                  @error('name')
+                    <div class="text-danger small mt-1"><i class="bi bi-exclamation-circle"></i> {{ $message }}</div>
+                  @enderror
                 </div>
 
                 <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Email Anda" required="">
+                  <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" placeholder="Email Anda" value="{{ old('email') }}" required="">
+                  @error('email')
+                    <div class="text-danger small mt-1"><i class="bi bi-exclamation-circle"></i> {{ $message }}</div>
+                  @enderror
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subjek / Topik Konsultasi" required="">
+                  <input type="text" class="form-control @error('subject') is-invalid @enderror" name="subject" placeholder="Subjek / Topik Konsultasi" value="{{ old('subject') }}" required="">
+                  @error('subject')
+                    <div class="text-danger small mt-1"><i class="bi bi-exclamation-circle"></i> {{ $message }}</div>
+                  @enderror
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Pesan / Detail Kebutuhan Proyek" required=""></textarea>
+                  <textarea class="form-control @error('message') is-invalid @enderror" name="message" rows="6" placeholder="Pesan / Detail Kebutuhan Proyek" required="">{{ old('message') }}</textarea>
+                  @error('message')
+                    <div class="text-danger small mt-1"><i class="bi bi-exclamation-circle"></i> {{ $message }}</div>
+                  @enderror
                 </div>
 
                 <div class="col-md-12 text-center">

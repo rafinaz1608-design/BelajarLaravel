@@ -34,14 +34,16 @@
 
         <div class="form-group">
           <label class="form-label" for="name">Nama Lengkap <span class="req">*</span></label>
-          <input type="text" id="name" name="name" class="form-control"
+          <input type="text" id="name" name="name" class="form-control @error('name') is-invalid @enderror"
             value="{{ old('name', auth()->user()->name) }}" required>
+          @error('name') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
           <label class="form-label" for="email">Email <span class="req">*</span></label>
-          <input type="email" id="email" name="email" class="form-control"
+          <input type="email" id="email" name="email" class="form-control @error('email') is-invalid @enderror"
             value="{{ old('email', auth()->user()->email) }}" required>
+          @error('email') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <button type="submit" class="btn btn-primary w-100" id="btn-update-profile">
@@ -72,10 +74,10 @@
           <label class="form-label" for="current_password">Password Saat Ini</label>
           <div class="input-icon-wrap" style="position:relative">
             <i class="bi bi-lock-fill"></i>
-            <input type="password" id="current_password" name="current_password" class="form-control" placeholder="••••••••">
+            <input type="password" id="current_password" name="current_password" class="form-control @error('current_password') is-invalid @enderror" placeholder="••••••••">
           </div>
           @error('current_password')
-            <div class="form-error">{{ $message }}</div>
+            <div class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</div>
           @enderror
         </div>
 
@@ -83,8 +85,11 @@
           <label class="form-label" for="password">Password Baru</label>
           <div class="input-icon-wrap" style="position:relative">
             <i class="bi bi-key-fill"></i>
-            <input type="password" id="password" name="password" class="form-control" placeholder="Min 8 karakter">
+            <input type="password" id="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="Min 8 karakter">
           </div>
+          @error('password')
+            <div class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</div>
+          @enderror
         </div>
 
         <div class="form-group">

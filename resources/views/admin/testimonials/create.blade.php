@@ -18,10 +18,10 @@
   </div>
 </div>
 
-<div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;max-width:900px">
+<form action="{{ route('admin.testimonials.store') }}" method="POST" enctype="multipart/form-data" id="testimonial-form">
+  @csrf
 
-  <form action="{{ route('admin.testimonials.store') }}" method="POST" enctype="multipart/form-data" id="testimonial-form">
-    @csrf
+  <div style="display:grid;grid-template-columns:2fr 1fr;gap:20px;max-width:900px">
 
     <div class="admin-card">
       <div class="admin-card-header">
@@ -31,15 +31,18 @@
         <div class="form-grid">
           <div class="form-group">
             <label class="form-label" for="client_name">Nama Klien <span class="req">*</span></label>
-            <input type="text" id="client_name" name="client_name" class="form-control" placeholder="cth: Budi Santoso" value="{{ old('client_name') }}" required>
+            <input type="text" id="client_name" name="client_name" class="form-control @error('client_name') is-invalid @enderror" placeholder="cth: Budi Santoso" value="{{ old('client_name') }}" required>
+            @error('client_name') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
           </div>
           <div class="form-group">
             <label class="form-label" for="company">Perusahaan <span class="req">*</span></label>
-            <input type="text" id="company" name="company" class="form-control" placeholder="cth: PT. Maju Jaya" value="{{ old('company') }}" required>
+            <input type="text" id="company" name="company" class="form-control @error('company') is-invalid @enderror" placeholder="cth: PT. Maju Jaya" value="{{ old('company') }}" required>
+            @error('company') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
           </div>
           <div class="form-group full">
             <label class="form-label" for="role">Jabatan</label>
-            <input type="text" id="role" name="role" class="form-control" placeholder="cth: CEO, Direktur, Manager" value="{{ old('role') }}">
+            <input type="text" id="role" name="role" class="form-control @error('role') is-invalid @enderror" placeholder="cth: CEO, Direktur, Manager" value="{{ old('role') }}">
+            @error('role') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
           </div>
         </div>
 
@@ -51,12 +54,14 @@
               <label for="star{{ $i }}" title="{{ $i }} bintang">★</label>
             @endfor
           </div>
+          @error('rating') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-group">
           <label class="form-label" for="content">Isi Ulasan <span class="req">*</span></label>
-          <textarea id="content" name="content" class="form-control" rows="5"
+          <textarea id="content" name="content" class="form-control @error('content') is-invalid @enderror" rows="5"
             placeholder="Tuliskan ulasan dari klien di sini..." required>{{ old('content') }}</textarea>
+          @error('content') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
 
         <div class="form-check" style="margin-bottom:20px">
@@ -70,28 +75,29 @@
 
       </div>
     </div>
-  </form>
 
-  <div class="admin-card" style="align-self:start">
-    <div class="admin-card-header">
-      <span class="admin-card-title"><i class="bi bi-image"></i> Foto Klien</span>
-    </div>
-    <div class="admin-card-body">
-      <div style="text-align:center;margin-bottom:16px">
-        <div id="avatar-placeholder" style="width:80px;height:80px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#fff;margin:0 auto 8px">
-          <i class="bi bi-person"></i>
+    <div class="admin-card" style="align-self:start">
+      <div class="admin-card-header">
+        <span class="admin-card-title"><i class="bi bi-image"></i> Foto Klien</span>
+      </div>
+      <div class="admin-card-body">
+        <div style="text-align:center;margin-bottom:16px">
+          <div id="avatar-placeholder" style="width:80px;height:80px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#fff;margin:0 auto 8px">
+            <i class="bi bi-person"></i>
+          </div>
+          <div style="font-size:12px;color:var(--text-muted)">Preview Foto</div>
         </div>
-        <div style="font-size:12px;color:var(--text-muted)">Preview Foto</div>
-      </div>
-      <div class="form-group mb-0">
-        <label class="form-label" for="avatar">Upload Foto</label>
-        <input type="file" id="avatar" name="avatar" class="form-control" accept="image/*">
-        <div class="form-hint">Foto persegi/bulat lebih baik. Maks 1MB.</div>
+        <div class="form-group mb-0">
+          <label class="form-label" for="avatar">Upload Foto</label>
+          <input type="file" id="avatar" name="avatar" class="form-control @error('avatar') is-invalid @enderror" accept="image/*">
+          <div class="form-hint">Foto persegi/bulat lebih baik. Maks 1MB.</div>
+          @error('avatar') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
+        </div>
       </div>
     </div>
-  </div>
 
-</div>
+  </div>
+</form>
 
 @push('scripts')
 <script>
