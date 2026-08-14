@@ -60,7 +60,12 @@
           </div>
 
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="{{ asset($service->image ?? 'assets/img/services.jpg') }}" alt="{{ $service->title }}" class="img-fluid services-img mb-4 rounded shadow-sm">
+            @php
+              $serviceImg = $service->image
+                ? (Str::startsWith($service->image, 'assets/') ? asset($service->image) : Storage::url($service->image))
+                : asset('assets/img/services.jpg');
+            @endphp
+            <img src="{{ $serviceImg }}" alt="{{ $service->title }}" class="img-fluid services-img mb-4 rounded shadow-sm">
             
             <h2 class="fw-bold mb-3">{{ $service->title }}</h2>
             

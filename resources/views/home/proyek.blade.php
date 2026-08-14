@@ -14,7 +14,12 @@
           @foreach($projects as $project)
             <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="{{ ($loop->index + 1) * 100 }}">
               <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden position-relative">
-                <img src="{{ asset($project->image ?? 'assets/img/features-1.jpg') }}" class="card-img-top" alt="{{ $project->title }}" style="height: 220px; object-fit: cover;">
+                @php
+                  $projectImg = $project->image
+                    ? (Str::startsWith($project->image, 'assets/') ? asset($project->image) : Storage::url($project->image))
+                    : asset('assets/img/features-1.jpg');
+                @endphp
+                <img src="{{ $projectImg }}" class="card-img-top" alt="{{ $project->title }}" style="height: 220px; object-fit: cover;">
                 <div class="card-body p-4 d-flex flex-column">
                   <div class="mb-2">
                     <span class="badge px-3 py-2 me-1" style="background-color: var(--accent-color, #800000); color: #fff;">{{ $project->category }}</span>

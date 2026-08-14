@@ -82,7 +82,12 @@
           </div>
 
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="{{ asset($project->image ?? 'assets/img/features-1.jpg') }}" alt="{{ $project->title }}" class="img-fluid rounded-4 shadow-sm mb-4 w-100" style="max-height: 450px; object-fit: cover;">
+            @php
+              $projectImg = $project->image
+                ? (Str::startsWith($project->image, 'assets/') ? asset($project->image) : Storage::url($project->image))
+                : asset('assets/img/features-1.jpg');
+            @endphp
+            <img src="{{ $projectImg }}" alt="{{ $project->title }}" class="img-fluid rounded-4 shadow-sm mb-4 w-100" style="max-height: 450px; object-fit: cover;">
             
             <span class="badge mb-2 px-3 py-2 fs-6" style="background-color: var(--accent-color, #800000); color: #fff;">{{ $project->category }}</span>
             <h2 class="fw-bold mb-3">{{ $project->title }}</h2>

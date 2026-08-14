@@ -11,9 +11,14 @@
 
         <!-- Logo Klien & Partner -->
         <div class="row gy-4 justify-content-center align-items-center mb-5">
-          @foreach($clients as $client)
+            @foreach($clients as $client)
             <div class="col-xl-2 col-md-3 col-6 client-logo d-flex justify-content-center align-items-center p-3">
-              <img src="{{ asset($client->logo) }}" class="img-fluid" alt="{{ $client->name }}" title="{{ $client->name }}">
+              @php
+                $clientLogo = $client->logo
+                  ? (Str::startsWith($client->logo, 'assets/') ? asset($client->logo) : Storage::url($client->logo))
+                  : asset('assets/img/clients/client-1.png');
+              @endphp
+              <img src="{{ $clientLogo }}" class="img-fluid" alt="{{ $client->name }}" title="{{ $client->name }}">
             </div><!-- End Client Item -->
           @endforeach
         </div>
@@ -70,7 +75,12 @@
                     </p>
                   </div>
                   <div class="profile d-flex align-items-center pt-3 border-top mt-auto">
-                    <img src="{{ asset($testimonial->avatar ?? 'assets/img/testimonials/default-avatar.png') }}" class="testimonial-img rounded-circle me-3" alt="{{ $testimonial->client_name }}" style="width: 50px; height: 50px; object-fit: cover;">
+                    @php
+                      $avatarUrl = $testimonial->avatar
+                        ? (Str::startsWith($testimonial->avatar, 'assets/') ? asset($testimonial->avatar) : Storage::url($testimonial->avatar))
+                        : asset('assets/img/testimonials/default-avatar.png');
+                    @endphp
+                    <img src="{{ $avatarUrl }}" class="testimonial-img rounded-circle me-3" alt="{{ $testimonial->client_name }}" style="width: 50px; height: 50px; object-fit: cover;">
                     <div>
                       <h5 class="fw-bold mb-0 text-dark fs-6">{{ $testimonial->client_name }}</h5>
                       <small class="text-primary fw-medium">{{ $testimonial->company }} @if($testimonial->role) — {{ $testimonial->role }} @endif</small>
