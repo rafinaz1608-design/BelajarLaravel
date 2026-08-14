@@ -13,6 +13,8 @@
   <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
   <!-- Admin CSS -->
   <link href="{{ asset('assets/css/admin.css') }}" rel="stylesheet">
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 
   @stack('styles')
 </head>
@@ -138,15 +140,21 @@
 
       {{-- Flash Messages --}}
       @if(session('success'))
-        <div class="alert alert-success fade-in">
-          <i class="bi bi-check-circle-fill"></i>
-          {{ session('success') }}
+        <div class="alert alert-success fade-in" id="flash-alert">
+          <div class="alert-content">
+            <i class="bi bi-check-circle-fill"></i>
+            <span>{{ session('success') }}</span>
+          </div>
+          <button type="button" class="alert-close" onclick="this.parentElement.remove()"><i class="bi bi-x-lg"></i></button>
         </div>
       @endif
       @if(session('error') || $errors->any())
-        <div class="alert alert-danger fade-in">
-          <i class="bi bi-exclamation-triangle-fill"></i>
-          {{ session('error') ?? $errors->first() }}
+        <div class="alert alert-danger fade-in" id="flash-alert">
+          <div class="alert-content">
+            <i class="bi bi-exclamation-triangle-fill"></i>
+            <span>{{ session('error') ?? $errors->first() }}</span>
+          </div>
+          <button type="button" class="alert-close" onclick="this.parentElement.remove()"><i class="bi bi-x-lg"></i></button>
         </div>
       @endif
 
@@ -154,6 +162,8 @@
     </div>
   </main>
 
+  <!-- SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     // Clock
     function updateClock() {
@@ -172,10 +182,29 @@
     }
     toggleBtn?.addEventListener('click', () => sidebar.classList.toggle('open'));
 
-    // Delete confirmation
+    // SweetAlert2 Delete confirmation
     document.querySelectorAll('form[data-confirm]').forEach(form => {
-      form.addEventListener('submit', e => {
-        if (!confirm(form.dataset.confirm || 'Yakin ingin menghapus?')) e.preventDefault();
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const msg = this.dataset.confirm || 'Yakin ingin menghapus data ini?';
+        Swal.fire({
+          title: 'Konfirmasi Hapus',
+          text: msg,
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#800000',
+          cancelButtonColor: '#64748b',
+          confirmButtonText: '<i class="bi bi-trash-fill"></i> Ya, Hapus!',
+          cancelButtonText: 'Batal',
+          reverseButtons: true,
+          customClass: {
+            popup: 'swal2-dark-popup'
+          }
+        }).then((result) => {
+          if (result.isConfirmed) {
+            form.submit();
+          }
+        });
       });
     });
 

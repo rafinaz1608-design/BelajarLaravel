@@ -38,35 +38,43 @@
           <div class="form-grid">
             <div class="form-group">
               <label class="form-label" for="title">Judul Proyek <span class="req">*</span></label>
-              <input type="text" id="title" name="title" class="form-control" value="{{ old('title', $project->title) }}" required>
+              <input type="text" id="title" name="title" class="form-control @error('title') is-invalid @enderror" value="{{ old('title', $project->title) }}" required>
+              @error('title') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="slug">Slug URL</label>
-              <input type="text" id="slug" name="slug" class="form-control" value="{{ old('slug', $project->slug) }}">
+              <input type="text" id="slug" name="slug" class="form-control @error('slug') is-invalid @enderror" value="{{ old('slug', $project->slug) }}">
+              @error('slug') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="category">Kategori <span class="req">*</span></label>
-              <input type="text" id="category" name="category" class="form-control" value="{{ old('category', $project->category) }}" required>
+              <input type="text" id="category" name="category" class="form-control @error('category') is-invalid @enderror" value="{{ old('category', $project->category) }}" required>
+              @error('category') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="client_name">Nama Klien</label>
-              <input type="text" id="client_name" name="client_name" class="form-control" value="{{ old('client_name', $project->client_name) }}">
+              <input type="text" id="client_name" name="client_name" class="form-control @error('client_name') is-invalid @enderror" value="{{ old('client_name', $project->client_name) }}">
+              @error('client_name') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="location">Lokasi</label>
-              <input type="text" id="location" name="location" class="form-control" value="{{ old('location', $project->location) }}">
+              <input type="text" id="location" name="location" class="form-control @error('location') is-invalid @enderror" value="{{ old('location', $project->location) }}">
+              @error('location') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group">
               <label class="form-label" for="completion_date">Tanggal Selesai</label>
-              <input type="text" id="completion_date" name="completion_date" class="form-control" value="{{ old('completion_date', $project->completion_date) }}">
+              <input type="text" id="completion_date" name="completion_date" class="form-control @error('completion_date') is-invalid @enderror" value="{{ old('completion_date', $project->completion_date) }}">
+              @error('completion_date') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group full">
               <label class="form-label" for="short_description">Deskripsi Singkat <span class="req">*</span></label>
-              <textarea id="short_description" name="short_description" class="form-control" rows="3" required>{{ old('short_description', $project->short_description) }}</textarea>
+              <textarea id="short_description" name="short_description" class="form-control @error('short_description') is-invalid @enderror" rows="3" required>{{ old('short_description', $project->short_description) }}</textarea>
+              @error('short_description') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
             <div class="form-group full">
               <label class="form-label" for="full_description">Deskripsi Lengkap <span class="req">*</span></label>
-              <textarea id="full_description" name="full_description" class="form-control" rows="6" required>{{ old('full_description', $project->full_description) }}</textarea>
+              <textarea id="full_description" name="full_description" class="form-control @error('full_description') is-invalid @enderror" rows="6" required>{{ old('full_description', $project->full_description) }}</textarea>
+              @error('full_description') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             </div>
           </div>
         </div>
