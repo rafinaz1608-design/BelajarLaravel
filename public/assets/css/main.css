@@ -35,17 +35,17 @@
 
 /* Warna Menu Navigasi - Variabel warna berikut digunakan khusus untuk menu navigasi. Ini terpisah dari warna global untuk memungkinkan opsi kustomisasi lebih lanjut */
 :root {
-  --nav-color: #313336;
+  --nav-color: #1a1d20;
   /* Warna default dari link menu navigasi utama */
-  --nav-hover-color: #77b6ca;
+  --nav-hover-color: #800000;
   /* Diterapkan pada link menu navigasi utama saat diarahkan (hover) atau sedang aktif */
   --nav-mobile-background-color: #ffffff;
   /* Digunakan sebagai warna latar belakang untuk menu navigasi seluler/mobile */
   --nav-dropdown-background-color: #ffffff;
   /* Digunakan sebagai warna latar belakang untuk item dropdown yang muncul saat mengarahkan kursor ke item navigasi utama */
-  --nav-dropdown-color: #313336;
+  --nav-dropdown-color: #1a1d20;
   /* Digunakan untuk link navigasi pada item dropdown di menu navigasi. */
-  --nav-dropdown-hover-color: #77b6ca;
+  --nav-dropdown-hover-color: #800000;
   /* Mirip dengan --nav-hover-color, warna ini diterapkan pada link navigasi dropdown saat diarahkan (hover). */
 }
 
@@ -156,9 +156,11 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 10px 0;
-  transition: all 0.5s;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  padding: 12px 0;
+  transition: all 0.3s;
   z-index: 997;
 }
 
@@ -228,7 +230,7 @@ h6 {
 /* Index Page Header
 ------------------------------*/
 .index-page .header {
-  --background-color: rgba(255, 255, 255, 0);
+  --background-color: rgba(255, 255, 255, 0.95);
 }
 
 /* Index Page Header on Scroll
@@ -264,7 +266,7 @@ h6 {
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
-    font-weight: 400;
+    font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -863,9 +865,9 @@ section,
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 70vh;
+  min-height: 80vh;
   position: relative;
-  padding: 180px 0 40px 0;
+  padding: 180px 0 120px 0;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -878,12 +880,13 @@ section,
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: 1;
 }
 
 .hero .hero-bg::before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 15%);
+  background: rgba(15, 23, 42, 0.65);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -895,59 +898,54 @@ section,
 }
 
 .hero h1 {
-  margin: 0;
+  margin: 0 0 15px 0;
   font-size: 48px;
   font-weight: 700;
-  line-height: 56px;
+  line-height: 1.25;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
 .hero h1 span {
-  color: var(--accent-color);
+  color: #ff6b6b;
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-  margin: 5px 0 30px 0;
-  font-size: 20px;
-  font-weight: 400;
-}
-
-@media (min-width: 768px) {
-  .hero .hero-img {
-    max-width: 600px;
-  }
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0 auto 30px auto;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 780px;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
 }
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: #ffffff;
+  background-color: #800000;
   font-family: var(--heading-font);
-  font-weight: 500;
+  font-weight: 600;
   font-size: 15px;
-  letter-spacing: 1px;
   display: inline-block;
-  padding: 10px 28px;
+  padding: 12px 32px;
   border-radius: 50px;
-  transition: 0.5s;
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
 }
 
 .hero .btn-get-started:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+  background-color: #a00000;
+  color: #ffffff;
 }
 
 .hero .btn-watch-video {
   font-size: 16px;
   transition: 0.5s;
   margin-left: 25px;
-  color: var(--default-color);
+  color: #ffffff;
   font-weight: 600;
 }
 
 .hero .btn-watch-video i {
-  color: var(--accent-color);
+  color: #ff6b6b;
   font-size: 32px;
   transition: 0.3s;
   line-height: 0;
@@ -955,28 +953,33 @@ section,
 }
 
 .hero .btn-watch-video:hover {
-  color: var(--accent-color);
+  color: #ff9e9e;
 }
 
 .hero .btn-watch-video:hover i {
-  color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: #ffa8a8;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
+  .hero {
+    padding: 140px 0 80px 0;
+    min-height: 70vh;
+  }
+
   .hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+    font-size: 30px;
+    line-height: 38px;
   }
 
   .hero p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 24px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 
-  .hero .btn-get-started,
-  .hero .btn-watch-video {
-    font-size: 13px;
+  .hero .btn-get-started {
+    font-size: 14px;
+    padding: 10px 24px;
   }
 }
 
@@ -984,20 +987,34 @@ section,
 # Featured Services Section
 --------------------------------------------------------------*/
 .featured-services {
-  padding: 40px 0;
+  padding: 80px 0 60px 0;
+  position: relative;
+  z-index: 10;
 }
 
 .featured-services .service-item {
   position: relative;
-  padding-top: 20px;
+  padding: 28px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+}
+
+.featured-services .service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
 }
 
 .featured-services .service-item .icon {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
-  width: 72px;
-  height: 72px;
+  background-color: color-mix(in srgb, var(--accent-color), transparent 85%);
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
   position: relative;
-  margin-right: 15px;
+  margin-right: 18px;
   line-height: 0;
   display: flex;
   align-items: center;
@@ -1007,15 +1024,15 @@ section,
 
 .featured-services .service-item .icon i {
   color: var(--accent-color);
-  font-size: 32px;
+  font-size: 28px;
   z-index: 2;
   position: relative;
 }
 
 .featured-services .service-item .title {
   font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 18px;
+  margin-bottom: 8px;
+  font-size: 19px;
 }
 
 .featured-services .service-item .title a {
@@ -1028,6 +1045,8 @@ section,
 
 .featured-services .service-item .description {
   font-size: 14px;
+  line-height: 1.6;
+  color: #555555;
 }
 
 .featured-services .service-item:hover .icon {
