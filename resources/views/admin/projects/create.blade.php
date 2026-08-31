@@ -103,8 +103,9 @@
         <div class="admin-card-body">
           <div class="form-group mb-0">
             <label class="form-label" for="image">Upload Foto</label>
-            <input type="file" id="image" name="image" class="form-control" accept="image/*" data-preview="#img-preview">
-            <div class="form-hint">JPG, PNG, WebP. Maks 3MB. Disarankan rasio 16:9.</div>
+            <input type="file" id="image" name="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" data-preview="#img-preview">
+            @error('image') <span class="form-error" style="color:var(--accent-red);font-size:13px;display:block;margin-top:5px"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
+            <div class="form-hint">JPG, PNG, WebP. Maks 10MB. Disarankan rasio 16:9.</div>
             <div class="img-preview-wrap" id="img-preview"><img src="" alt="Preview"></div>
           </div>
         </div>

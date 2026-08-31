@@ -31,7 +31,7 @@ class TestimonialAdminController extends Controller
             'content'     => 'required|string',
             'rating'      => 'required|integer|min:1|max:5',
             'is_active'   => 'boolean',
-            'avatar'      => 'nullable|image|mimes:jpg,jpeg,png,webp|max:1024',
+            'avatar'      => 'nullable|image|mimes:jpg,jpeg,png,webp|max:10240',
         ]);
 
         $validated['is_active'] = $request->boolean('is_active');
@@ -59,7 +59,7 @@ class TestimonialAdminController extends Controller
             'content'     => 'required|string',
             'rating'      => 'required|integer|min:1|max:5',
             'is_active'   => 'boolean',
-            'avatar'      => 'nullable|image|mimes:jpg,jpeg,png,webp|max:1024',
+            'avatar'      => 'nullable|image|mimes:jpg,jpeg,png,webp|max:10240',
         ]);
 
         $validated['is_active'] = $request->boolean('is_active');

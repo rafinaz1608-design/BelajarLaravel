@@ -112,14 +112,18 @@
         </div>
         <div class="admin-card-body">
           @if($service->image)
+            @php
+              $serviceImg = Str::startsWith($service->image, 'assets/') ? asset($service->image) : Storage::url($service->image);
+            @endphp
             <div style="margin-bottom:12px;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-color)">
-              <img src="{{ Storage::url($service->image) }}" alt="Gambar saat ini" style="width:100%;height:160px;object-fit:cover">
+              <img src="{{ $serviceImg }}" alt="Gambar saat ini" style="width:100%;height:160px;object-fit:cover">
             </div>
             <div class="form-hint mb-12">Upload baru untuk mengganti gambar di atas.</div>
           @endif
           <div class="form-group mb-0">
             <label class="form-label" for="image">Upload Gambar Baru</label>
-            <input type="file" id="image" name="image" class="form-control" accept="image/*" data-preview="#img-preview">
+            <input type="file" id="image" name="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" data-preview="#img-preview">
+            @error('image') <span class="form-error" style="color:var(--accent-red);font-size:13px;display:block;margin-top:5px"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
             <div class="img-preview-wrap" id="img-preview"><img src="" alt="Preview"></div>
           </div>
         </div>

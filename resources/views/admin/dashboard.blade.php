@@ -148,13 +148,7 @@
             <div style="font-size:11px;color:var(--text-muted)">Upload logo mitra baru</div>
           </div>
         </a>
-        <a href="{{ route('admin.contacts.index', ['status'=>'unread']) }}" class="quick-action-btn" id="qa-view-unread" style="border-color:rgba(239,68,68,0.3)">
-          <i class="bi bi-envelope-exclamation" style="color:var(--accent-red)"></i>
-          <div>
-            <div style="font-weight:600;font-size:13px;color:var(--text-primary)">Pesan Belum Dibaca</div>
-            <div style="font-size:11px;color:var(--accent-red)">{{ $unreadCount }} pesan menunggu</div>
-          </div>
-        </a>
+
       </div>
     </div>
   </div>

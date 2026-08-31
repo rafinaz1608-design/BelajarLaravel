@@ -44,7 +44,10 @@
             <td>
               <div class="d-flex align-center gap-12">
                 @if($t->avatar)
-                  <img src="{{ Storage::url($t->avatar) }}" alt="{{ $t->client_name }}" class="testimonial-avatar">
+                  @php
+                    $avatarUrl = Str::startsWith($t->avatar, 'assets/') ? asset($t->avatar) : Storage::url($t->avatar);
+                  @endphp
+                  <img src="{{ $avatarUrl }}" alt="{{ $t->client_name }}" class="testimonial-avatar">
                 @else
                   <div class="testimonial-avatar-placeholder">{{ strtoupper(substr($t->client_name, 0, 1)) }}</div>
                 @endif

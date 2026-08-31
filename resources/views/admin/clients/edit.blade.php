@@ -48,8 +48,11 @@
         <div class="form-group">
           <label class="form-label" for="logo">Logo Perusahaan</label>
           @if($client->logo)
+            @php
+              $logoUrl = Str::startsWith($client->logo, 'assets/') ? asset($client->logo) : Storage::url($client->logo);
+            @endphp
             <div style="margin-bottom:12px;padding:16px;background:rgba(255,255,255,0.03);border-radius:var(--radius-md);border:1px solid var(--border-color);display:flex;align-items:center;gap:12px">
-              <img src="{{ Storage::url($client->logo) }}" alt="{{ $client->name }}" style="height:50px;object-fit:contain">
+              <img src="{{ $logoUrl }}" alt="{{ $client->name }}" style="height:50px;object-fit:contain">
               <span style="font-size:12px;color:var(--text-muted)">Logo saat ini</span>
             </div>
           @endif

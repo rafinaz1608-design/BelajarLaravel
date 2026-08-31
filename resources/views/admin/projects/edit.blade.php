@@ -114,12 +114,16 @@
         </div>
         <div class="admin-card-body">
           @if($project->image)
+            @php
+              $projectImg = Str::startsWith($project->image, 'assets/') ? asset($project->image) : Storage::url($project->image);
+            @endphp
             <div style="margin-bottom:12px;border-radius:var(--radius-md);overflow:hidden;border:1px solid var(--border-color)">
-              <img src="{{ Storage::url($project->image) }}" alt="{{ $project->title }}" style="width:100%;height:160px;object-fit:cover">
+              <img src="{{ $projectImg }}" alt="{{ $project->title }}" style="width:100%;height:160px;object-fit:cover">
             </div>
             <div class="form-hint mb-12">Upload baru untuk mengganti foto.</div>
           @endif
-          <input type="file" id="image" name="image" class="form-control" accept="image/*" data-preview="#img-preview">
+          <input type="file" id="image" name="image" class="form-control @error('image') is-invalid @enderror" accept="image/*" data-preview="#img-preview">
+          @error('image') <span class="form-error" style="color:var(--accent-red);font-size:13px;display:block;margin-top:5px"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
           <div class="img-preview-wrap" id="img-preview"><img src="" alt="Preview"></div>
         </div>
       </div>

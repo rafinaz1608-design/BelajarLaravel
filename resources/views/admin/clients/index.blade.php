@@ -43,7 +43,10 @@
           <tr>
             <td>
               @if($client->logo)
-                <img src="{{ Storage::url($client->logo) }}" alt="{{ $client->name }}"
+                @php
+                  $logoUrl = Str::startsWith($client->logo, 'assets/') ? asset($client->logo) : Storage::url($client->logo);
+                @endphp
+                <img src="{{ $logoUrl }}" alt="{{ $client->name }}"
                   style="height:40px;max-width:80px;object-fit:contain;filter:brightness(0.9)">
               @else
                 <div style="width:60px;height:40px;background:rgba(255,255,255,0.05);border-radius:8px;display:flex;align-items:center;justify-content:center">

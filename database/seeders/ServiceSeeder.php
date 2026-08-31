@@ -26,7 +26,7 @@ class ServiceSeeder extends Seeder
                     'Monitoring pasokan gas real-time 24/7',
                     'Dukungan sistem Pressure Regulating System (PRS) handal'
                 ],
-                'image' => 'assets/img/services.jpg',
+                'image' => 'assets/img/tabs-1.jpg',
             ],
             [
                 'title' => 'Pengembangan Infrastruktur Gas',
@@ -41,7 +41,7 @@ class ServiceSeeder extends Seeder
                     'Pengujian tekanan, purging, dan commissioning sistem',
                     'Inspeksi keselamatan dan sertifikasi kelayakan teknis'
                 ],
-                'image' => 'assets/img/services.jpg',
+                'image' => 'assets/img/tabs-2.jpg',
             ],
             [
                 'title' => 'Konstruksi Sipil (Civil Construction)',
@@ -56,7 +56,7 @@ class ServiceSeeder extends Seeder
                     'Konstruksi drainase, jalan kawasan, dan pagar pembatas',
                     'Manajemen proyek sipil dengan standar ISO & K3'
                 ],
-                'image' => 'assets/img/services.jpg',
+                'image' => 'assets/img/tabs-3.jpg',
             ],
             [
                 'title' => 'Mechanical & Electrical',
@@ -71,7 +71,7 @@ class ServiceSeeder extends Seeder
                     'Sistem pencahayaan, grounding, dan penangkal petir',
                     'Testing, balancing, dan commissioning sistem ME'
                 ],
-                'image' => 'assets/img/services.jpg',
+                'image' => 'assets/img/features-1.jpg',
             ],
             [
                 'title' => 'Maintenance & New Building',
@@ -86,7 +86,7 @@ class ServiceSeeder extends Seeder
                     'Pekerjaan penyempurnaan estetika & keandalan bangunan',
                     'Layanan respons cepat untuk perbaikan darurat'
                 ],
-                'image' => 'assets/img/services.jpg',
+                'image' => 'assets/img/features-3.jpg',
             ],
             [
                 'title' => 'Solusi Terintegrasi',

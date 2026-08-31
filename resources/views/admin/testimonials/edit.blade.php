@@ -94,7 +94,10 @@
       <div class="admin-card-body">
         <div style="text-align:center;margin-bottom:16px" id="avatar-display">
           @if($testimonial->avatar)
-            <img src="{{ Storage::url($testimonial->avatar) }}" alt="{{ $testimonial->client_name }}"
+            @php
+              $avatarUrl = Str::startsWith($testimonial->avatar, 'assets/') ? asset($testimonial->avatar) : Storage::url($testimonial->avatar);
+            @endphp
+            <img src="{{ $avatarUrl }}" alt="{{ $testimonial->client_name }}"
               style="width:80px;height:80px;border-radius:50%;object-fit:cover;border:2px solid var(--border-color)">
           @else
             <div style="width:80px;height:80px;border-radius:50%;background:var(--gradient-primary);display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:700;color:#fff;margin:0 auto">

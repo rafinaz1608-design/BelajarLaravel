@@ -36,7 +36,7 @@ class ProjectAdminController extends Controller
             'full_description'  => 'required|string',
             'features'          => 'nullable|array',
             'features.*'        => 'nullable|string',
-            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:3072',
+            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:10240',
         ]);
 
         $validated['slug'] = $validated['slug'] ?: Str::slug($validated['title']);
@@ -69,7 +69,7 @@ class ProjectAdminController extends Controller
             'full_description'  => 'required|string',
             'features'          => 'nullable|array',
             'features.*'        => 'nullable|string',
-            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:3072',
+            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:10240',
         ]);
 
         $validated['slug'] = $validated['slug'] ?: Str::slug($validated['title']);

@@ -34,7 +34,7 @@ class ServiceAdminController extends Controller
             'full_description'  => 'required|string',
             'features'          => 'nullable|array',
             'features.*'        => 'nullable|string',
-            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:10240',
             'catalog_pdf'       => 'nullable|mimes:pdf|max:10240',
             'catalog_doc'       => 'nullable|mimes:doc,docx|max:10240',
         ]);
@@ -73,7 +73,7 @@ class ServiceAdminController extends Controller
             'full_description'  => 'required|string',
             'features'          => 'nullable|array',
             'features.*'        => 'nullable|string',
-            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:2048',
+            'image'             => 'nullable|image|mimes:jpg,jpeg,png,webp|max:10240',
             'catalog_pdf'       => 'nullable|mimes:pdf|max:10240',
             'catalog_doc'       => 'nullable|mimes:doc,docx|max:10240',
         ]);

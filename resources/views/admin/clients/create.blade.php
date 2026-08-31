@@ -43,7 +43,7 @@
         <div class="form-group">
           <label class="form-label" for="logo">Logo Perusahaan</label>
           <input type="file" id="logo" name="logo" class="form-control @error('logo') is-invalid @enderror" accept="image/*" data-preview="#logo-preview">
-          <div class="form-hint">PNG transparan lebih baik. JPG, WebP diterima. Maks 1MB.</div>
+          <div class="form-hint">PNG transparan lebih baik. JPG, WebP diterima. Maks 10MB.</div>
           <div class="img-preview-wrap" id="logo-preview"><img src="" alt="Preview Logo"></div>
           @error('logo') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>

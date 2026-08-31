@@ -44,7 +44,10 @@
           <tr>
             <td>
               @if($project->image)
-                <img src="{{ Storage::url($project->image) }}" alt="{{ $project->title }}"
+                @php
+                  $projectImg = Str::startsWith($project->image, 'assets/') ? asset($project->image) : Storage::url($project->image);
+                @endphp
+                <img src="{{ $projectImg }}" alt="{{ $project->title }}"
                   style="width:60px;height:44px;object-fit:cover;border-radius:8px;border:1px solid var(--border-color)">
               @else
                 <div style="width:60px;height:44px;background:rgba(255,255,255,0.05);border-radius:8px;display:flex;align-items:center;justify-content:center">

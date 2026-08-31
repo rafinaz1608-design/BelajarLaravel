@@ -28,7 +28,7 @@ class ClientAdminController extends Controller
             'name'      => 'required|string|max:255',
             'website'   => 'nullable|url|max:255',
             'is_active' => 'boolean',
-            'logo'      => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:1024',
+            'logo'      => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:10240',
         ]);
 
         $validated['is_active'] = $request->boolean('is_active');
@@ -53,7 +53,7 @@ class ClientAdminController extends Controller
             'name'      => 'required|string|max:255',
             'website'   => 'nullable|url|max:255',
             'is_active' => 'boolean',
-            'logo'      => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:1024',
+            'logo'      => 'nullable|image|mimes:jpg,jpeg,png,webp,svg|max:10240',
         ]);
 
         $validated['is_active'] = $request->boolean('is_active');

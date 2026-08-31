@@ -90,7 +90,7 @@
         <div class="form-group mb-0">
           <label class="form-label" for="avatar">Upload Foto</label>
           <input type="file" id="avatar" name="avatar" class="form-control @error('avatar') is-invalid @enderror" accept="image/*">
-          <div class="form-hint">Foto persegi/bulat lebih baik. Maks 1MB.</div>
+          <div class="form-hint">Foto persegi/bulat lebih baik. Maks 10MB.</div>
           @error('avatar') <span class="form-error"><i class="bi bi-exclamation-circle-fill"></i> {{ $message }}</span> @enderror
         </div>
       </div>
