@@ -71,6 +71,11 @@
         <span>Kelola Testimoni</span>
       </a>
 
+      <a href="{{ route('admin.products.index') }}" class="{{ request()->routeIs('admin.products.*') ? 'active' : '' }}" id="nav-products">
+        <i class="bi bi-bag-fill"></i>
+        <span>Kelola Produk</span>
+      </a>
+
       <div class="sidebar-section-label" style="margin-top:12px">Akun</div>
 
       <a href="{{ route('admin.profile.edit') }}" class="{{ request()->routeIs('admin.profile.*') ? 'active' : '' }}" id="nav-profile">

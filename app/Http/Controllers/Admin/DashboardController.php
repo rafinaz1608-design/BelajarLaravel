@@ -8,6 +8,7 @@ use App\Models\Project;
 use App\Models\Service;
 use App\Models\Client;
 use App\Models\Testimonial;
+use App\Models\Product;
 
 class DashboardController extends Controller
 {
@@ -18,6 +19,7 @@ class DashboardController extends Controller
         $activeServices  = Service::count();
         $totalClients    = Client::count();
         $totalTestimonials = Testimonial::count();
+        $totalProducts   = Product::count();    
         $recentContacts  = Contact::latest()->take(5)->get();
 
         return view('admin.dashboard', compact(
@@ -26,6 +28,7 @@ class DashboardController extends Controller
             'activeServices',
             'totalClients',
             'totalTestimonials',
+            'totalProducts',
             'recentContacts'
         ));
     }

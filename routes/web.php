@@ -9,12 +9,14 @@ use App\Http\Controllers\Admin\ContactAdminController;
 use App\Http\Controllers\Admin\ServiceAdminController;
 use App\Http\Controllers\Admin\ProjectAdminController;
 use App\Http\Controllers\Admin\ClientAdminController;
+use App\Http\Controllers\Admin\ProductAdminController;
 use App\Http\Controllers\Admin\TestimonialAdminController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Models\Client;
 use App\Models\Project;
 use App\Models\Service;
 use App\Models\Testimonial;
+use App\Models\Product;     
 use Illuminate\Support\Facades\Route;
 
 // ============================================================
@@ -25,7 +27,8 @@ Route::get('/', function () {
     $projects     = Project::all();
     $clients      = Client::where('is_active', true)->get();
     $testimonials = Testimonial::where('is_active', true)->get();
-    return view('index', compact('services', 'projects', 'clients', 'testimonials'));
+    $products     = Product::where('is_active', true)->get();
+    return view('index', compact('services', 'projects', 'clients', 'testimonials', 'products'));
 });
 
 Route::get('/layanan/{slug}', [ServiceController::class, 'show'])->name('services.show');
@@ -98,6 +101,15 @@ Route::prefix('admin')->middleware('auth')->group(function () {
         'destroy' => 'admin.testimonials.destroy',
     ])->except(['show']);
     Route::post('testimonials/{testimonial}/toggle', [TestimonialAdminController::class, 'toggleActive'])->name('admin.testimonials.toggle');
+
+    Route::resource('products', ProductAdminController::class)->names([
+        'index'   => 'admin.products.index',
+        'create'  => 'admin.products.create',
+        'store'   => 'admin.products.store',
+        'edit'    => 'admin.products.edit',
+        'update'  => 'admin.products.update',
+        'destroy' => 'admin.products.destroy',
+    ])->except(['show']);
 
     // Profile / Settings
     Route::get('profile',   [ProfileController::class, 'edit'])->name('admin.profile.edit');

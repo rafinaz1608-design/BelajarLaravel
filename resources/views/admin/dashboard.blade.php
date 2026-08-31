@@ -42,6 +42,13 @@
     </div>
   </div>
 
+  
+<div class="stat-card cyan fade-in fade-in-delay-2">
+    <div class="stat-icon"><i class="bi bi-folder2-open"></i></div>
+    <div class="stat-value">{{ $totalProducts }}</div>
+    <div class="stat-label">Total Produk</div>
+    <div class="stat-trend"><i class="bi bi-collection"></i> Produk yang ditampilkan</div>
+  </div>    
 </div>
 
 {{-- ==================== MAIN GRID ==================== --}}
@@ -148,6 +155,13 @@
             <div style="font-size:11px;color:var(--text-muted)">Upload logo mitra baru</div>
           </div>
         </a>
+
+        <a href="{{ route('admin.products.create') }}" class="quick-action-btn" id="qa-add-product" style="border-color:rgba(14,165,233,0.3)">
+          <i class="bi bi-box-seam" style="color:var(--accent-cyan)"></i>
+          <div>
+            <div style="font-weight:600;font-size:13px;color:var(--text-primary)">+ Tambah Produk</div>
+            <div style="font-size:11px;color:var(--text-muted)">Tambahkan produk baru</div>
+          </div>
         <a href="{{ route('admin.contacts.index', ['status'=>'unread']) }}" class="quick-action-btn" id="qa-view-unread" style="border-color:rgba(239,68,68,0.3)">
           <i class="bi bi-envelope-exclamation" style="color:var(--accent-red)"></i>
           <div>
