@@ -13,12 +13,12 @@ class ProductAdminController extends Controller
     {
         $products = Product::latest()->paginate(20);
 
-        return view('admin.product.index', compact('products'));
+        return view('admin.products.index', compact('products'));
     }
 
     public function create()
     {
-        return view('admin.product.create');
+        return view('admin.products.create');
     }
 
     public function store(Request $request)
@@ -84,7 +84,7 @@ class ProductAdminController extends Controller
         $product->delete();
 
         return redirect()
-            ->route('admin.product.index')
+            ->route('admin.products.index')
             ->with('success', 'Produk berhasil dihapus.');
     }
 }
